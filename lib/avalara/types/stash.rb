@@ -2,6 +2,7 @@
 
 require 'hashie/trash'
 require 'hashie/extensions/coercion'
+require 'hashie/extensions/indifferent_access'
 
 module Avalara
   module Types
@@ -15,6 +16,7 @@ module Avalara
     #
     class Stash < ::Hashie::Trash
       include Hashie::Extensions::Coercion
+      include Hashie::Extensions::IndifferentAccess
 
 
       private
